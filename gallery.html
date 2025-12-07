@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея проектов | Крым Инженеринг - Реализованные проекты</title>
+    <meta name="description" content="Галерея реализованных проектов премиальных инженерных систем: виллы, пентхаусы, имения в Крыму. Более 500 успешных проектов.">
+    <meta name="keywords" content="проекты инженерных систем, галерея работ, виллы Крым, пентхаусы, элитная недвижимость, выполненные проекты">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://krym-engineering.ru/gallery.html">
+    <link rel="icon" type="image/x-icon" href="assets/logo/favicon.ico">
+    
+    <!-- Кэширование и производительность -->
+    <meta http-equiv="Cache-Control" content="public, max-age=3600">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    
+    <link rel="stylesheet" href="style.css?v=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a365d',
+                        secondary: '#c05621',
+                        accent: '#2d3748',
+                        light: '#f7fafc',
+                        dark: '#1a202c'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light text-gray-800 dark:bg-dark dark:text-gray-200 font-sans transition-colors duration-300">
+    <custom-navbar></custom-navbar>
+    
+    <!-- Quick Navigation Tabs -->
+    <section class="sticky top-20 z-40 bg-white/80 dark:bg-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 py-4 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-wrap justify-center gap-2 md:gap-4 overflow-x-auto no-scrollbar">
+                <a href="index.html" class="quick-nav-tab px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-secondary hover:text-white text-gray-700 dark:text-gray-300 text-sm font-medium transition-all duration-300 whitespace-nowrap">
+                    <i data-feather="home" class="w-4 h-4 inline mr-2"></i>Главная
+                </a>
+                <a href="#gallery-header" class="quick-nav-tab px-4 py-2 rounded-full bg-secondary text-white text-sm font-medium whitespace-nowrap">
+                    <i data-feather="image" class="w-4 h-4 inline mr-2"></i>Галерея
+                </a>
+                <a href="#villa" class="quick-nav-tab px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-secondary hover:text-white text-gray-700 dark:text-gray-300 text-sm font-medium transition-all duration-300 whitespace-nowrap">
+                    <i data-feather="home" class="w-4 h-4 inline mr-2"></i>Виллы
+                </a>
+                <a href="#penthouse" class="quick-nav-tab px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-secondary hover:text-white text-gray-700 dark:text-gray-300 text-sm font-medium transition-all duration-300 whitespace-nowrap">
+                    <i data-feather="building" class="w-4 h-4 inline mr-2"></i>Пентхаусы
+                </a>
+                <a href="#estate" class="quick-nav-tab px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-secondary hover:text-white text-gray-700 dark:text-gray-300 text-sm font-medium transition-all duration-300 whitespace-nowrap">
+                    <i data-feather="map-pin" class="w-4 h-4 inline mr-2"></i>Имения
+                </a>
+                <a href="contact.html" class="quick-nav-tab px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-secondary hover:text-white text-gray-700 dark:text-gray-300 text-sm font-medium transition-all duration-300 whitespace-nowrap">
+                    <i data-feather="phone" class="w-4 h-4 inline mr-2"></i>Контакты
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <section id="gallery-header" class="pt-32 pb-20 px-4 md:px-8 bg-gradient-to-r from-primary/10 via-transparent to-secondary/10 dark:from-primary/20 dark:to-secondary/20 scroll-mt-24">
+<div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary dark:text-white">Галерея проектов</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Реализованные проекты премиальных инженерных систем в элитной недвижимости Крыма.
+            </p>
+</div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="py-12 px-4 md:px-8 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="gallery-filter bg-secondary text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300" data-filter="all">
+                    Все проекты
+                </button>
+                <button class="gallery-filter bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold py-2 px-6 rounded-lg transition-all duration-300" data-filter="villa">
+                    Виллы
+                </button>
+                <button class="gallery-filter bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold py-2 px-6 rounded-lg transition-all duration-300" data-filter="penthouse">
+                    Пентхаусы
+                </button>
+                <button class="gallery-filter bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold py-2 px-6 rounded-lg transition-all duration-300" data-filter="estate">
+                    Имения
+                </button>
+                <button class="gallery-filter bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold py-2 px-6 rounded-lg transition-all duration-300" data-filter="commercial">
+                    Коммерческие
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-20 px-4 md:px-8 bg-light dark:bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div id="villa" class="mb-8 scroll-mt-24"></div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 gallery-grid">
+                <!-- Project 1 - 2008 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="villa" data-image="img/gallery/project-2008-1.jpg" data-title="Частный дом, Севастополь" data-description="Первый проект компании. Проектирование и монтаж систем отопления и водоснабжения для частного дома. Газовое отопление, автономное водоснабжение из скважины." data-year="2008" data-area="180 м²">
+                    <img src="img/gallery/project-2008-1.jpg" alt="Частный дом в Севастополе - первый проект 2008" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Частный дом, Севастополь</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Первый проект компании. Проектирование и монтаж систем отопления и водоснабжения для частного дома.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">180 м²</span>
+                            <span class="text-sm">2008</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 - 2009 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="villa" data-image="img/gallery/project-2009-1.jpg" data-title="Вилла «Морской бриз», Ялта" data-description="Проектирование и монтаж инженерных коммуникаций для элитной виллы. Вентиляция, отопление, водоснабжение, канализация. Первый крупный проект премиум-класса." data-year="2009" data-area="320 м²">
+                    <img src="img/gallery/project-2009-1.jpg" alt="Вилла Морской бриз в Ялте 2009" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Вилла «Морской бриз», Ялта</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Проектирование и монтаж инженерных коммуникаций для элитной виллы. Вентиляция, отопление, водоснабжение.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">320 м²</span>
+                            <span class="text-sm">2009</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - 2010 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="commercial" data-image="img/gallery/project-2010-1.jpg" data-title="Ресторан «Волна», Севастополь" data-description="Коммерческий проект: проектирование и монтаж систем вентиляции и кондиционирования для ресторана. Приточно-вытяжная вентиляция, центральное кондиционирование." data-year="2010" data-area="450 м²">
+                    <img src="img/gallery/project-2010-1.jpg" alt="Ресторан Волна в Севастополе 2010" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Ресторан «Волна», Севастополь</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Коммерческий проект: проектирование и монтаж систем вентиляции и кондиционирования для ресторана.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">450 м²</span>
+                            <span class="text-sm">2010</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 - 2011 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="villa" data-image="img/gallery/project-2011-1.jpg" data-title="Вилла «Солнечная», Форос" data-description="Проектирование и монтаж инженерных коммуникаций для виллы премиум-класса. Вентиляция с рекуперацией, отопление, водоснабжение, канализация, кондиционирование." data-year="2011" data-area="480 м²">
+                    <img src="img/gallery/project-2011-1.jpg" alt="Вилла Солнечная в Форосе 2011" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Вилла «Солнечная», Форос</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Проектирование и монтаж инженерных коммуникаций для виллы премиум-класса. Вентиляция с рекуперацией.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">480 м²</span>
+                            <span class="text-sm">2011</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 - 2012 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="penthouse" data-image="img/gallery/project-2012-1.jpg" data-title="Пентхаус «Небесный», Севастополь" data-description="Проектирование и монтаж систем кондиционирования и вентиляции для пентхауса. Мультизональные системы, умное управление климатом." data-year="2012" data-area="220 м²">
+                    <img src="img/gallery/project-2012-1.jpg" alt="Пентхаус Небесный в Севастополе 2012" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Пентхаус «Небесный», Севастополь</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Проектирование и монтаж систем кондиционирования и вентиляции для пентхауса. Мультизональные системы.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">220 м²</span>
+                            <span class="text-sm">2012</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 - 2013 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="estate" data-image="img/gallery/project-2013-1.jpg" data-title="Имение «Горная вилла», Алупка" data-description="Проектирование и монтаж инженерных коммуникаций для крупного имения. Геотермальное отопление, автономное водоснабжение, канализация, вентиляция." data-year="2013" data-area="850 м²">
+                    <img src="img/gallery/project-2013-1.jpg" alt="Имение Горная вилла в Алупке 2013" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Имение «Горная вилла», Алупка</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Проектирование и монтаж инженерных коммуникаций для крупного имения. Геотермальное отопление.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">850 м²</span>
+                            <span class="text-sm">2013</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 - 2014 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="villa" data-image="img/gallery/project-2014-1.jpg" data-title="Вилла «Лазурная», Симеиз" data-description="Проектирование и монтаж инженерных коммуникаций для виллы на берегу моря. Вентиляция, отопление, водоснабжение, канализация, кондиционирование, бассейн." data-year="2014" data-area="550 м²">
+                    <img src="img/gallery/project-2014-1.jpg" alt="Вилла Лазурная в Симеизе 2014" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Вилла «Лазурная», Симеиз</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Проектирование и монтаж инженерных коммуникаций для виллы на берегу моря. Бассейн с подогревом.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">550 м²</span>
+                            <span class="text-sm">2014</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 - 2015 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="commercial" data-image="img/gallery/project-2015-1.jpg" data-title="Спа-отель «Релакс», Гурзуф" data-description="Коммерческий проект: проектирование и монтаж систем вентиляции, кондиционирования и водоснабжения для спа-отеля. Центральные системы, рекуперация." data-year="2015" data-area="1200 м²">
+                    <img src="img/gallery/project-2015-1.jpg" alt="Спа-отель Релакс в Гурзуфе 2015" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Спа-отель «Релакс», Гурзуф</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Коммерческий проект: проектирование и монтаж систем вентиляции, кондиционирования для спа-отеля.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">1200 м²</span>
+                            <span class="text-sm">2015</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 - 2016 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="villa" data-image="img/gallery/project-2016-1.jpg" data-title="Вилла «Премиум», Ялта" data-description="Проектирование и монтаж инженерных коммуникаций премиум-класса. Вентиляция с рекуперацией, тепловые насосы, умное управление, центральное пылеудаление." data-year="2016" data-area="680 м²">
+                    <img src="img/gallery/project-2016-1.jpg" alt="Вилла Премиум в Ялте 2016" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Вилла «Премиум», Ялта</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Проектирование и монтаж инженерных коммуникаций премиум-класса. Тепловые насосы, умное управление.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">680 м²</span>
+                            <span class="text-sm">2016</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10 - 2017 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="penthouse" data-image="img/gallery/project-2017-1.jpg" data-title="Пентхаус «Элит», Севастополь" data-description="Проектирование и монтаж систем кондиционирования, вентиляции и увлажнения для пентхауса. VRF-системы, умный климат-контроль." data-year="2017" data-area="350 м²">
+                    <img src="img/gallery/project-2017-1.jpg" alt="Пентхаус Элит в Севастополе 2017" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Пентхаус «Элит», Севастополь</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Проектирование и монтаж систем кондиционирования, вентиляции и увлажнения. VRF-системы.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">350 м²</span>
+                            <span class="text-sm">2017</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11 - 2018 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="estate" data-image="img/gallery/project-2018-1.jpg" data-title="Имение «Виноградное», Бахчисарай" data-description="Проектирование и монтаж инженерных коммуникаций для крупного имения. Геотермальное отопление, автономное водоснабжение, канализация, солнечные коллекторы." data-year="2018" data-area="1100 м²">
+                    <img src="img/gallery/project-2018-1.jpg" alt="Имение Виноградное в Бахчисарае 2018" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Имение «Виноградное», Бахчисарай</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Проектирование и монтаж инженерных коммуникаций для крупного имения. Геотермальное отопление.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">1100 м²</span>
+                            <span class="text-sm">2018</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12 - 2019 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="villa" data-image="img/gallery/project-2019-1.jpg" data-title="Вилла «Райский уголок», Форос" data-description="Проектирование и монтаж инженерных коммуникаций для виллы премиум-класса. Вентиляция, отопление, водоснабжение, канализация, кондиционирование, увлажнение, пылеудаление." data-year="2019" data-area="720 м²">
+                    <img src="img/gallery/project-2019-1.jpg" alt="Вилла Райский уголок в Форосе 2019" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Вилла «Райский уголок», Форос</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Проектирование и монтаж инженерных коммуникаций для виллы премиум-класса. Полный комплекс систем.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">720 м²</span>
+                            <span class="text-sm">2019</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 13 - 2020 -->
+                <div id="penthouse" class="scroll-mt-24"></div>
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="commercial" data-image="img/gallery/project-2020-1.jpg" data-title="Бутик-отель «Вилла Роза», Симеиз" data-description="Коммерческий проект: проектирование и монтаж систем вентиляции, кондиционирования и водоснабжения для бутик-отеля. Центральные системы, рекуперация тепла." data-year="2020" data-area="800 м²">
+                    <img src="img/gallery/project-2020-1.jpg" alt="Бутик-отель Вилла Роза в Симеизе 2020" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Бутик-отель «Вилла Роза», Симеиз</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Коммерческий проект: проектирование и монтаж систем вентиляции, кондиционирования для бутик-отеля.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">800 м²</span>
+                            <span class="text-sm">2020</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 14 - 2021 -->
+                <div id="estate" class="scroll-mt-24"></div>
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="estate" data-image="img/gallery/project-2021-1.jpg" data-title="Имение «Горный воздух», Ялта" data-description="Проектирование и монтаж инженерных коммуникаций для крупного имения. Геотермальное отопление, система сбора дождевой воды, солнечные коллекторы, умное управление." data-year="2021" data-area="1200 м²">
+                    <img src="img/gallery/project-2021-1.jpg" alt="Имение Горный воздух в Ялте 2021" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Имение «Горный воздух», Ялта</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Проектирование и монтаж инженерных коммуникаций для крупного имения. Геотермальное отопление.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">1200 м²</span>
+                            <span class="text-sm">2021</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 15 - 2022 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="penthouse" data-image="img/gallery/project-2022-1.jpg" data-title="Пентхаус «Вид на бухту», Севастополь" data-description="Проектирование и монтаж систем кондиционирования, вентиляции, увлажнения и пылеудаления для пентхауса. Умный климат-контроль, центральный пылесос, системы фильтрации воздуха." data-year="2022" data-area="280 м²">
+                    <img src="img/gallery/project-2022-1.jpg" alt="Пентхаус Вид на бухту в Севастополе 2022" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Пентхаус «Вид на бухту», Севастополь</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Умный климат-контроль, центральный пылесос, системы фильтрации воздуха. Полный комплекс премиум-систем.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">280 м²</span>
+                            <span class="text-sm">2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 16 - 2022 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="penthouse" data-image="img/gallery/project-2022-2.jpg" data-title="Апартаменты «Гурзуфские холмы», Гурзуф" data-description="Проектирование и монтаж систем кондиционирования и вентиляции для апартаментов. Индивидуальные фанкойлы, канальные кондиционеры, увлажнение воздуха." data-year="2022" data-area="180 м²">
+                    <img src="img/gallery/project-2022-2.jpg" alt="Апартаменты Гурзуфские холмы в Гурзуфе 2022" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Апартаменты «Гурзуфские холмы», Гурзуф</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Индивидуальные фанкойлы, канальные кондиционеры, увлажнение. Современные решения для комфорта.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">180 м²</span>
+                            <span class="text-sm">2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 17 - 2023 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="villa" data-image="img/gallery/project-2023-1.jpg" data-title="Вилла «Морская звезда», Форос" data-description="Проектирование и монтаж инженерных коммуникаций для виллы премиум-класса. Полный комплекс: вентиляция с рекуперацией, отопление тепловыми насосами, водоснабжение, канализация, кондиционирование VRF, увлажнение, пылеудаление." data-year="2023" data-area="450 м²">
+                    <img src="img/gallery/project-2023-1.jpg" alt="Вилла Морская звезда в Форосе 2023" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Вилла «Морская звезда», Форос</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Полный комплекс: вентиляция, отопление, водоснабжение, кондиционирование. Премиум-решения.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">450 м²</span>
+                            <span class="text-sm">2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 18 - 2023 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="villa" data-image="img/gallery/project-2023-2.jpg" data-title="Вилла «Лазурный берег», Алупка" data-description="Проектирование и монтаж инженерных коммуникаций для виллы на берегу моря. Бассейн с подогревом, система умного полива, централизованное управление всеми системами, умный дом." data-year="2023" data-area="600 м²">
+                    <img src="img/gallery/project-2023-2.jpg" alt="Вилла Лазурный берег в Алупке 2023" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Вилла «Лазурный берег», Алупка</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Бассейн с подогревом, система умного полива, централизованное управление. Интеграция с умным домом.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">600 м²</span>
+                            <span class="text-sm">2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 19 - 2024 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="estate" data-image="img/gallery/project-2024-1.jpg" data-title="Имение «Элитное», Кореиз" data-description="Проектирование и монтаж инженерных коммуникаций для крупного имения премиум-класса. Геотермальное отопление, автономное водоснабжение, канализация с биологической очисткой, солнечные коллекторы, умное управление всеми системами." data-year="2024" data-area="1500 м²">
+                    <img src="img/gallery/project-2024-1.jpg" alt="Имение Элитное в Кореизе 2024" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Имение «Элитное», Кореиз</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Проектирование и монтаж инженерных коммуникаций для крупного имения. Геотермальное отопление, солнечные коллекторы.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">1500 м²</span>
+                            <span class="text-sm">2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 20 - 2025 -->
+                <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer" data-category="villa" data-image="img/gallery/project-2025-1.jpg" data-title="Вилла «Футуристическая», Севастополь" data-description="Самый современный проект: проектирование и монтаж инженерных коммуникаций с использованием новейших технологий. Умный дом, AI-управление климатом, энергоэффективные системы, полная автоматизация." data-year="2025" data-area="520 м²">
+                    <img src="img/gallery/project-2025-1.jpg" alt="Вилла Футуристическая в Севастополе 2025" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700 gallery-image">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Вилла «Футуристическая», Севастополь</h3>
+                        <p class="text-gray-200 dark:text-gray-100 mb-4">Самый современный проект с AI-управлением климатом. Умный дом, полная автоматизация систем.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm bg-secondary/80 py-1 px-3 rounded-full">520 м²</span>
+                            <span class="text-sm">2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-20 px-4 md:px-8 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-secondary mb-4 counter" data-target="150">0</div>
+                    <h3 class="text-xl font-bold text-primary dark:text-white mb-2">Довольных клиентов</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Частные и коммерческие заказчики</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-secondary mb-4 counter" data-target="500">0</div>
+                    <h3 class="text-xl font-bold text-primary dark:text-white mb-2">Завершённых проектов</h3>
+                    <p class="text-gray-600 dark:text-gray-300">От квартир до крупных имений</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-secondary mb-4 counter" data-target="15">0</div>
+                    <h3 class="text-xl font-bold text-primary dark:text-white mb-2">Лет опыта</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Работаем с 2008 года</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-secondary mb-4 counter" data-target="24">0</div>
+                    <h3 class="text-xl font-bold text-primary dark:text-white mb-2">Часа поддержки</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Круглосуточный сервис</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 px-4 md:px-8 bg-gradient-to-r from-primary to-accent text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">Хотите такой же уровень инженерии?</h2>
+            <p class="text-xl mb-10 text-blue-100 max-w-2xl mx-auto">
+                Свяжитесь с нами для консультации и расчёта проекта под ваши требования.
+            </p>
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <i data-feather="phone"></i>
+                Обсудить проект
+            </a>
+</div>
+    </section>
+
+    <partners-carousel></partners-carousel>
+    <custom-footer></custom-footer>
+
+    <!-- Кнопка тёмной темы -->
+    <button id="themeToggle" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-secondary text-white rounded-full shadow-2xl flex items-center justify-center hover:rotate-180 transition-all">
+        <i data-feather="moon" class="dark:hidden w-7 h-7"></i>
+        <i data-feather="sun" class="hidden dark:block w-7 h-7"></i>
+    </button>
+
+    <script src="js/navbar.js?v=1.0"></script>
+    <script src="js/partners-carousel.js?v=1.0"></script>
+    <script src="js/footer.js?v=1.0"></script>
+    <script src="js/analytics.js?v=1.0"></script>
+    <script src="js/script.js?v=1.0"></script>
+    <script>
+        feather.replace();
+    </script>
+    <!-- Premium Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <div class="image-modal-overlay"></div>
+        <div class="image-modal-container">
+            <button class="image-modal-close" aria-label="Закрыть">
+                <i data-feather="x"></i>
+            </button>
+            <button class="image-modal-nav image-modal-prev" aria-label="Предыдущее изображение">
+                <i data-feather="chevron-left"></i>
+            </button>
+            <button class="image-modal-nav image-modal-next" aria-label="Следующее изображение">
+                <i data-feather="chevron-right"></i>
+            </button>
+            <div class="image-modal-content">
+                <img id="modalImage" src="" alt="" class="image-modal-img">
+                <div class="image-modal-info">
+                    <h3 id="modalTitle" class="image-modal-title"></h3>
+                    <p id="modalDescription" class="image-modal-description"></p>
+                    <div class="image-modal-meta">
+                        <span id="modalYear" class="image-modal-year"></span>
+                        <span id="modalArea" class="image-modal-area"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+        
+        // Gallery filtering
+        document.querySelectorAll('.gallery-filter').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.gallery-filter').forEach(btn => {
+                    btn.classList.remove('bg-secondary', 'text-white');
+                    btn.classList.add('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+                });
+                this.classList.remove('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+                this.classList.add('bg-secondary', 'text-white');
+                
+                const filter = this.dataset.filter;
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Premium Image Modal with Navigation
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalYear = document.getElementById('modalYear');
+        const modalArea = document.getElementById('modalArea');
+        const closeBtn = document.querySelector('.image-modal-close');
+        const overlay = document.querySelector('.image-modal-overlay');
+        const prevBtn = document.querySelector('.image-modal-prev');
+        const nextBtn = document.querySelector('.image-modal-next');
+
+        // Массив всех элементов галереи (только видимые)
+        let galleryItems = [];
+        let currentIndex = 0;
+
+        function getVisibleGalleryItems() {
+            return Array.from(document.querySelectorAll('.gallery-item')).filter(item => {
+                return item.style.display !== 'none' && window.getComputedStyle(item).display !== 'none';
+            });
+        }
+
+        function updateModalContent(item) {
+            const imageSrc = item.dataset.image;
+            const title = item.dataset.title;
+            const description = item.dataset.description;
+            const year = item.dataset.year;
+            const area = item.dataset.area;
+
+            // Плавная загрузка изображения
+            modalImage.classList.add('loading');
+            modalImage.alt = title;
+            
+            const img = new Image();
+            img.onload = function() {
+                modalImage.src = imageSrc;
+                modalImage.classList.remove('loading');
+            };
+            img.src = imageSrc;
+
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            modalYear.textContent = year;
+            modalArea.textContent = area;
+        }
+
+        function showImage(index) {
+            if (galleryItems.length === 0) return;
+            
+            currentIndex = index;
+            if (currentIndex < 0) currentIndex = galleryItems.length - 1;
+            if (currentIndex >= galleryItems.length) currentIndex = 0;
+
+            updateModalContent(galleryItems[currentIndex]);
+            feather.replace();
+            updateNavButtons();
+        }
+
+        function updateNavButtons() {
+            if (galleryItems.length <= 1) {
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'flex';
+                nextBtn.style.display = 'flex';
+            }
+        }
+
+        function nextImage() {
+            showImage(currentIndex + 1);
+        }
+
+        function prevImage() {
+            showImage(currentIndex - 1);
+        }
+
+        // Открытие модального окна
+        document.querySelectorAll('.gallery-item').forEach((item, index) => {
+            item.addEventListener('click', function(e) {
+                e.stopPropagation();
+                galleryItems = getVisibleGalleryItems();
+                currentIndex = galleryItems.indexOf(this);
+                
+                if (currentIndex === -1) {
+                    currentIndex = 0;
+                }
+
+                if (galleryItems.length > 0) {
+                    updateModalContent(galleryItems[currentIndex]);
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    feather.replace();
+                    updateNavButtons();
+                }
+            });
+        });
+
+        // Навигация
+        nextBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            nextImage();
+        });
+
+        prevBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            prevImage();
+        });
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            galleryItems = [];
+            currentIndex = 0;
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', closeModal);
+
+        // Клавиатурная навигация
+        document.addEventListener('keydown', function(e) {
+            if (!modal.classList.contains('active')) return;
+
+            if (e.key === 'Escape') {
+                closeModal();
+            } else if (e.key === 'ArrowLeft') {
+                prevImage();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+            }
+        });
+    </script>
+</body>
+</html>

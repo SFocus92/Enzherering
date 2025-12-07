@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Страница не найдена | Крым Инженеринг</title>
+    <meta name="description" content="Страница не найдена. Вернитесь на главную страницу Крым Инженеринг.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://krym-engineering.ru/404.html">
+    <link rel="icon" type="image/x-icon" href="assets/logo/favicon.ico">
+    <link rel="stylesheet" href="style.css?v=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a365d',
+                        secondary: '#c05621',
+                        accent: '#2d3748',
+                        light: '#f7fafc',
+                        dark: '#1a202c'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light text-gray-800 dark:bg-dark dark:text-gray-200 font-sans transition-colors duration-300">
+    <custom-navbar></custom-navbar>
+    
+    <!-- 404 Error Section -->
+    <section class="min-h-screen flex items-center justify-center px-4 py-20">
+        <div class="max-w-2xl mx-auto text-center">
+            <div class="mb-8">
+                <h1 class="text-9xl font-serif font-bold text-primary dark:text-white mb-4">404</h1>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary dark:text-white">
+                    Страница не найдена
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-xl mx-auto">
+                    К сожалению, запрашиваемая страница не существует или была перемещена. Вернитесь на главную страницу или воспользуйтесь навигацией.
+                </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <a href="index.html" class="bg-secondary hover:bg-secondary/90 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-2">
+                    <i data-feather="home"></i>
+                    На главную
+                </a>
+                <a href="contact.html" class="border-2 border-primary text-primary dark:border-white dark:text-white hover:bg-primary dark:hover:bg-white hover:text-white dark:hover:text-dark font-semibold py-3 px-8 rounded-lg transition-all duration-300 flex items-center gap-2">
+                    <i data-feather="phone"></i>
+                    Связаться с нами
+                </a>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6 mt-12">
+                <a href="services.html" class="group bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:-translate-y-2">
+                    <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary/20 transition-colors">
+                        <i data-feather="settings" class="text-secondary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-primary dark:text-white">Услуги</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Наши услуги</p>
+                </a>
+                
+                <a href="gallery.html" class="group bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:-translate-y-2">
+                    <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary/20 transition-colors">
+                        <i data-feather="camera" class="text-secondary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-primary dark:text-white">Галерея</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Наши проекты</p>
+                </a>
+                
+                <a href="about.html" class="group bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:-translate-y-2">
+                    <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary/20 transition-colors">
+                        <i data-feather="info" class="text-secondary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-primary dark:text-white">О нас</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">О компании</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <custom-footer></custom-footer>
+    
+    <script src="js/navbar.js?v=1.0"></script>
+    <script src="js/footer.js?v=1.0"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
+

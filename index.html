@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крым Инженеринг | Проектирование и монтаж инженерных коммуникаций в Севастополе и Крыму</title>
+    <meta name="description" content="Проектирование и монтаж инженерных коммуникаций для частного строительства в Севастополе и Крыму. Вентиляция, отопление, водоснабжение, канализация, кондиционирование, увлажнение, пылеудаление. Премиум сегмент. Сопровождение 24/7.">
+    <meta name="keywords" content="инженерные коммуникации Крым, проектирование инженерных систем, монтаж инженерных систем, вентиляция Севастополь, отопление Крым, водоснабжение частный дом, канализация частный дом, кондиционирование премиум, увлажнение воздуха, пылеудаление, частное строительство, премиум инженерные системы, Севастополь, Крым">
+    <meta name="author" content="Крым Инженеринг">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://krym-engineering.ru/">
+    
+    <!-- Кэширование и производительность -->
+    <meta http-equiv="Cache-Control" content="public, max-age=3600">
+    <meta http-equiv="Expires" content="3600">
+    
+    <!-- Preload критических ресурсов -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="js/navbar.js" as="script">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" as="style">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://krym-engineering.ru/">
+    <meta property="og:title" content="Крым Инженеринг | Премиальные инженерные системы">
+    <meta property="og:description" content="Проектирование и монтаж премиальных инженерных систем для элитной недвижимости в Крыму">
+    <meta property="og:image" content="https://krym-engineering.ru/img/hero/hero-main.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://krym-engineering.ru/">
+    <meta property="twitter:title" content="Крым Инженеринг | Премиальные инженерные системы">
+    <meta property="twitter:description" content="Проектирование и монтаж премиальных инженерных систем для элитной недвижимости в Крыму">
+    <meta property="twitter:image" content="https://krym-engineering.ru/img/hero/hero-main.jpg">
+    
+    <link rel="icon" type="image/x-icon" href="assets/logo/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/logo/logo-icon.svg">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css?v=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a365d', // Deep Navy
+                        secondary: '#c05621', // Burnt Orange
+                        accent: '#2d3748', // Slate Gray
+                        light: '#f7fafc',
+                        dark: '#1a202c'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light text-gray-800 dark:bg-dark dark:text-gray-200 font-sans transition-colors duration-300">
+    <custom-navbar></custom-navbar>
+    <!-- Quick Navigation Tabs -->
+    <section class="sticky top-20 z-40 bg-white/80 dark:bg-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 py-4 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-wrap justify-center gap-2 md:gap-4 overflow-x-auto no-scrollbar">
+                <a href="#hero" class="quick-nav-tab px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-secondary hover:text-white text-gray-700 dark:text-gray-300 text-sm font-medium transition-all duration-300 whitespace-nowrap">
+                    <i data-feather="home" class="w-4 h-4 inline mr-2"></i>Главная
+                </a>
+                <a href="#services" class="quick-nav-tab px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-secondary hover:text-white text-gray-700 dark:text-gray-300 text-sm font-medium transition-all duration-300 whitespace-nowrap">
+                    <i data-feather="settings" class="w-4 h-4 inline mr-2"></i>Услуги
+                </a>
+                <a href="#projects" class="quick-nav-tab px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-secondary hover:text-white text-gray-700 dark:text-gray-300 text-sm font-medium transition-all duration-300 whitespace-nowrap">
+                    <i data-feather="image" class="w-4 h-4 inline mr-2"></i>Проекты
+                </a>
+                <a href="#about" class="quick-nav-tab px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-secondary hover:text-white text-gray-700 dark:text-gray-300 text-sm font-medium transition-all duration-300 whitespace-nowrap">
+                    <i data-feather="info" class="w-4 h-4 inline mr-2"></i>О нас
+                </a>
+                <a href="#contact" class="quick-nav-tab px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-secondary hover:text-white text-gray-700 dark:text-gray-300 text-sm font-medium transition-all duration-300 whitespace-nowrap">
+                    <i data-feather="phone" class="w-4 h-4 inline mr-2"></i>Контакты
+                </a>
+                <a href="gallery.html" class="quick-nav-tab px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-secondary hover:text-white text-gray-700 dark:text-gray-300 text-sm font-medium transition-all duration-300 whitespace-nowrap">
+                    <i data-feather="camera" class="w-4 h-4 inline mr-2"></i>Галерея
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative overflow-hidden pt-32 pb-20 px-4 md:px-8">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-secondary/10 dark:from-primary/30 dark:to-secondary/20"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                <h1 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary dark:text-white leading-tight">
+                    Проектирование и монтаж инженерных коммуникаций в <span class="text-secondary dark:text-orange-400">Севастополе</span> и <span class="text-secondary dark:text-orange-400">Крыму</span>
+                </h1>
+                <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl">
+                    Полный цикл проектирования, монтажа и сопровождения инженерных коммуникаций для частного строительства премиум-класса. Вентиляция, отопление, водоснабжение, канализация, кондиционирование, увлажнение, пылеудаление. Работаем по всему Крыму с гарантией качества.
+                </p>
+<div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-secondary hover:bg-secondary/90 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-2">
+                            <i data-feather="phone-call"></i>
+                            Заказать консультацию
+                        </a>
+                        <a href="#services" class="border-2 border-primary text-primary dark:border-white dark:text-white hover:bg-primary dark:hover:bg-white hover:text-white dark:hover:text-dark font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+                            Услуги
+                        </a>
+</div>
+                </div>
+                <div class="relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="img/hero/hero-main.jpg" alt="Проектирование и монтаж инженерных коммуникаций в Севастополе и Крыму" class="w-full h-[450px] md:h-[550px] object-cover">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    </div>
+                        <div class="absolute -bottom-6 -left-6 bg-white dark:bg-accent p-6 rounded-xl shadow-xl max-w-xs">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center">
+                                <i data-feather="award" class="text-secondary"></i>
+                            </div>
+                            <h3 class="font-bold text-lg">15+ лет опыта</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Премиальные инженерные решения для элитных жилых проектов по всему Крыму.</p>
+</div>
+</div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Grid -->
+    <section id="services" class="py-20 px-4 md:px-8 bg-white dark:bg-gray-900 scroll-mt-24">
+<div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-primary dark:text-white">Проектирование и монтаж инженерных коммуникаций</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Комплексные инженерные системы для частного строительства в Севастополе и Крыму. Проектирование, монтаж и полное сопровождение инженерных коммуникаций премиум-класса.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group bg-light dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
+                        <i data-feather="wind" class="text-secondary w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-white">Вентиляция</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Свежий воздух без сквозняков. Инженерные коммуникации вентиляции для частных домов в Севастополе и Крыму с рекуперацией тепла до 90%. Тихая работа, умное управление, энергоэффективность премиум-класса.</p>
+                    <a href="services.html#ventilation" class="text-secondary font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Подробнее
+                        <i data-feather="arrow-right" class="w-4 h-4"></i>
+                    </a>
+</div>
+                
+                <div class="group bg-light dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
+                        <i data-feather="thermometer" class="text-secondary w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-white">Отопление</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Тепло, которое чувствуется, но не видно. Интеллектуальные системы отопления для частного строительства в Крыму: тепловые насосы, премиум-котлы, тёплые полы. Погодозависимое управление и экономия до 40%.</p>
+                    <a href="services.html#heating" class="text-secondary font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Подробнее
+                        <i data-feather="arrow-right" class="w-4 h-4"></i>
+                    </a>
+</div>
+                
+                <div class="group bg-light dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
+                        <i data-feather="droplet" class="text-secondary w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-white">Водоснабжение</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Вода премиум-качества из вашего крана. Инженерные коммуникации водоснабжения и канализации для частных домов в Севастополе и Крыму. Скважины, многоступенчатая очистка, автономная канализация — полная независимость.</p>
+                    <a href="services.html#water" class="text-secondary font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Подробнее
+                        <i data-feather="arrow-right" class="w-4 h-4"></i>
+                    </a>
+</div>
+                
+                <div class="group bg-light dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
+                        <i data-feather="cloud-snow" class="text-secondary w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-white">Кондиционирование</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Идеальный климат в каждой комнате. Мультизональные системы кондиционирования премиум-класса для частного строительства в Крыму. Работа до 19 дБ, управление со смартфона, климат-контроль 365 дней в году.</p>
+                    <a href="services.html#ac" class="text-secondary font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Подробнее
+                        <i data-feather="arrow-right" class="w-4 h-4"></i>
+                    </a>
+</div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                <div class="group bg-light dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
+                        <i data-feather="umbrella" class="text-secondary w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-white">Увлажнение</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Здоровый микроклимат без сухости. Системы увлажнения воздуха для частных домов в Севастополе и Крыму с автоматическим контролем влажности. HEPA-фильтрация, бесшумная работа, защита от аллергенов.</p>
+</div>
+                
+                <div class="group bg-light dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
+                        <i data-feather="filter" class="text-secondary w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-white">Пылеудаление</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Уборка без шума и пыли в воздухе. Центральные системы пылеудаления для частного строительства в Крыму. Мощность до 600 AW, разъёмы в каждой комнате, гипоаллергенная среда премиум-класса.</p>
+</div>
+                
+                <div class="group bg-light dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
+                        <i data-feather="settings" class="text-secondary w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-white">Полное сопровождение</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">От идеи до идеального результата. Полный цикл работ: проектирование инженерных систем, монтаж инженерных коммуникаций, пусконаладка и сервис 24/7. Гарантия на все виды работ в Севастополе и Крыму.</p>
+</div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Projects -->
+    <section id="projects" class="py-20 px-4 md:px-8 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-dark scroll-mt-24">
+<div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-primary dark:text-white">Галерея проектов инженерных коммуникаций</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Реализованные проекты проектирования и монтажа инженерных систем для частного строительства в Севастополе и Крыму. Вентиляция, отопление, водоснабжение, канализация, кондиционирование.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
+                        <img src="img/gallery/project-1.jpg" alt="Проектирование и монтаж вентиляции для частного дома в Крыму" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Роскошная вилла, Форос</h3>
+                        <p class="text-gray-200">Полные системы HVAC и водоснабжения</p>
+</div>
+                </div>
+                
+                <div class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
+                        <img src="img/gallery/project-2.jpg" alt="Монтаж инженерных коммуникаций кондиционирования в Севастополе" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Пентхаус в Севастополе</h3>
+                        <p class="text-gray-200">Умный климат-контроль и фильтрация</p>
+</div>
+                </div>
+                
+                <div class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
+                        <img src="img/gallery/project-3.jpg" alt="Проектирование инженерных систем отопления и водоснабжения для частного строительства в Крыму" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Имение в Ялте</h3>
+                        <p class="text-gray-200">Полная инженерная инфраструктура</p>
+</div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="gallery.html" class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    Смотреть всю галерею
+                    <i data-feather="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 md:px-8 bg-white dark:bg-gray-900 scroll-mt-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-primary dark:text-white">О компании Крым Инженеринг</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Более 15 лет опыта в проектировании и монтаже инженерных коммуникаций для частного строительства в Севастополе и Крыму. Премиум сегмент: вентиляция, отопление, водоснабжение, канализация, кондиционирование, увлажнение, пылеудаление.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-secondary mb-4">15+</div>
+                    <h3 class="text-xl font-bold mb-2 text-primary dark:text-white">Лет опыта</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Работаем с 2008 года</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-secondary mb-4">500+</div>
+                    <h3 class="text-xl font-bold mb-2 text-primary dark:text-white">Проектов</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Успешно завершено</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-secondary mb-4">98%</div>
+                    <h3 class="text-xl font-bold mb-2 text-primary dark:text-white">Клиентов</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Довольны результатом</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="about.html" class="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 font-semibold">
+                    Узнать больше о нас
+                    <i data-feather="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 px-4 md:px-8 bg-gradient-to-r from-primary to-accent text-white scroll-mt-24">
+<div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">Готовы обсудить проект инженерных коммуникаций?</h2>
+                <p class="text-xl mb-10 text-blue-100 max-w-3xl mx-auto">
+                    Свяжитесь с нами для консультации по проектированию и монтажу инженерных систем для частного строительства в Севастополе и Крыму. Вентиляция, отопление, водоснабжение, канализация, кондиционирование, увлажнение, пылеудаление.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="tel:+79780000000" class="bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3">
+                    <i data-feather="phone"></i>
+                    +7 (978) 000-00-00
+                </a>
+                <a href="mailto:info@engineeringcomfort.ru" class="border-2 border-white text-white hover:bg-white hover:text-primary font-bold py-3 px-8 rounded-lg transition-all duration-300 flex items-center gap-3">
+                    <i data-feather="mail"></i>
+                    info@engineeringcomfort.ru
+                </a>
+</div>
+        </div>
+    </section>
+
+    <partners-carousel></partners-carousel>
+    <custom-footer></custom-footer>
+
+    <!-- Кнопка тёмной темы -->
+    <button id="themeToggle" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-secondary text-white rounded-full shadow-2xl flex items-center justify-center hover:rotate-180 transition-all">
+        <i data-feather="moon" class="dark:hidden w-7 h-7"></i>
+        <i data-feather="sun" class="hidden dark:block w-7 h-7"></i>
+    </button>
+
+    <script src="js/navbar.js?v=1.0"></script>
+    <script src="js/partners-carousel.js?v=1.0"></script>
+    <script src="js/footer.js?v=1.0"></script>
+    <script src="js/analytics.js?v=1.0"></script>
+    <script src="js/script.js?v=1.0"></script>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Крым Инженеринг",
+      "alternateName": "Engineering Comfort ELite",
+      "description": "Проектирование и монтаж инженерных коммуникаций для частного строительства в Севастополе и Крыму",
+      "url": "https://krym-engineering.ru",
+      "logo": "https://krym-engineering.ru/assets/logo/logo-icon.svg",
+      "image": "https://krym-engineering.ru/img/hero/hero-main.jpg",
+      "telephone": "+79780000000",
+      "email": "info@engineeringcomfort.ru",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Севастополь",
+        "addressRegion": "Крым",
+        "addressCountry": "RU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "44.6167",
+        "longitude": "33.5254"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Севастополь"
+      },
+      "serviceArea": {
+        "@type": "State",
+        "name": "Крым"
+      },
+      "priceRange": "$$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://vk.com/krymengineering",
+        "https://t.me/krymengineering"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Услуги по проектированию и монтажу инженерных коммуникаций",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Вентиляция",
+              "description": "Проектирование и монтаж систем вентиляции для частных домов"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Отопление",
+              "description": "Проектирование и монтаж систем отопления для частного строительства"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Водоснабжение и канализация",
+              "description": "Проектирование и монтаж систем водоснабжения и канализации"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Кондиционирование",
+              "description": "Проектирование и монтаж систем кондиционирования премиум-класса"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Увлажнение",
+              "description": "Проектирование и монтаж систем увлажнения воздуха"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Пылеудаление",
+              "description": "Проектирование и монтаж центральных систем пылеудаления"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

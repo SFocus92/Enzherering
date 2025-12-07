@@ -1,0 +1,27 @@
+{
+  "name": "Крым Инженеринг - Проектирование и монтаж инженерных коммуникаций",
+  "short_name": "Крым Инженеринг",
+  "description": "Проектирование и монтаж инженерных коммуникаций для частного строительства в Севастополе и Крыму",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a365d",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/logo/logo-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/logo/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["business", "engineering"],
+  "lang": "ru",
+  "dir": "ltr"
+}
+
