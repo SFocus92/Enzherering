@@ -1,0 +1,19 @@
+name: Deploy to Yandex Cloud
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to Yandex Object Storage
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.YC_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_SECRET_ACCESS_KEY }}
+        run: |
+          aws s3 sync . s3://enghenering-yandex --endpoint-url=https://storage.yandexcloud.net --delete --exclude '.git*' --exclude '.github/*'
