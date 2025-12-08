@@ -31,7 +31,7 @@
     // Яндекс.Метрика
     // Замените на реальный ID только после регистрации
     // Или используйте: const YANDEX_ID = process.env.YANDEX_ID || 'YOUR_YANDEX_ID';
-    const YANDEX_ID = 'YOUR_YANDEX_ID'; // Замените на ваш Яндекс.Метрика ID (например: 12345678)
+    const YANDEX_ID = '105738321'; // Замените на ваш Яндекс.Метрика ID (например: 12345678)
     
     if (YANDEX_ID && YANDEX_ID !== 'YOUR_YANDEX_ID') {
         (function(m,e,t,r,i,k,a){
