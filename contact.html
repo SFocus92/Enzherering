@@ -44,6 +44,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Yandex SmartCaptcha -->
+    <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
 </head>
 <body class="bg-light text-gray-800 dark:bg-dark dark:text-gray-200 font-sans transition-colors duration-300">
     <custom-navbar></custom-navbar>
@@ -215,7 +218,12 @@
                         </div>
                         
                         <!-- Yandex SmartCaptcha -->
-                        <div id="smartcaptcha-container" class="mb-4"></div>
+                        <div 
+                            style="height: 100px"
+                            id="captcha-container"
+                            class="smart-captcha"
+                            data-sitekey="ysc1_8s4L3uIuIGHlXBmULn0VSvYAP9m6MsjkOeNuUJ5o63f8b791"
+                        ></div>
                         <input type="hidden" id="captcha-token" name="captcha-token">
                         
                         <button type="submit" id="submitBtn" class="w-full bg-secondary hover:bg-secondary/90 text-white font-semibold py-4 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed">
@@ -284,9 +292,6 @@
         <i data-feather="sun" class="hidden dark:block w-7 h-7"></i>
     </button>
 
-    <!-- Yandex SmartCaptcha -->
-    <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
-    
     <script src="js/navbar.js"></script>
     <script src="js/partners-carousel.js"></script>
     <script src="js/footer.js"></script>
