@@ -8,28 +8,17 @@
     <meta name="keywords" content="контакты Крым Инженеринг, проектирование инженерных систем Севастополь, монтаж инженерных коммуникаций Крым, заказать консультацию, телефон, адрес">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://krym-engineering.ru/contact.html">
-
-    <!-- ИСПРАВЛЕННЫЙ CSP — теперь всё работает (капча + метрика) -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdn.jsdelivr.net https://unpkg.com https://mc.yandex.ru https://mc.yandex.com https://www.googletagmanager.com https://smartcaptcha.yandexcloud.net;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' blob: data: https: https://mc.yandex.ru https://mc.yandex.com;
-        connect-src 'self' https://mc.yandex.ru https://mc.yandex.com https://www.google-analytics.com https://smartcaptcha.yandexcloud.net;
-        frame-src https://smartcaptcha.yandexcloud.net;
-        child-src https://smartcaptcha.yandexcloud.net;
-    ">
-
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdn.jsdelivr.net https://unpkg.com https://mc.yandex.ru https://www.googletagmanager.com https://smartcaptcha.yandexcloud.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://mc.yandex.ru https://www.google-analytics.com https://smartcaptcha.yandexcloud.net;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-
+    
     <link rel="icon" type="image/x-icon" href="assets/logo/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -43,14 +32,13 @@
                         dark: '#1a202c'
                     },
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'Georgia', 'serif'],
                     }
                 }
             }
         }
     </script>
-
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,105 +46,230 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-light text-gray-800 dark:bg-dark dark:text-gray-200 font-sans transition-colors duration-300">
-
     <custom-navbar></custom-navbar>
-
-    <!-- Hero -->
-    <section class="pt-32 pb-20 px-4 relative overflow-hidden bg-gradient-to-br from-primary to-accent">
-        <!-- фон -->
-        <div class="absolute inset-0 bg-black/50"></div>
-        <div class="max-w-6xl mx-auto relative z-10 text-center text-white">
-            <h1 class="text-4xl md:text-5xl font-serif font-bold mb-6">Свяжитесь с нами</h1>
-            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Готовы обсудить ваш проект премиальных инженерных систем?</p>
+    
+    <!-- Quick Navigation Tabs -->
+    <section class="sticky top-20 z-40 bg-white/80 dark:bg-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 py-4 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-wrap justify-center gap-2 md:gap-4 overflow-x-auto no-scrollbar">
+                <a href="index.html" class="quick-nav-tab px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-secondary hover:text-white text-gray-700 dark:text-gray-300 text-sm font-medium transition-all duration-300 whitespace-nowrap">
+                    <i data-feather="home" class="w-4 h-4 inline mr-2"></i>Главная
+                </a>
+                <a href="#contact-header" class="quick-nav-tab px-4 py-2 rounded-full bg-secondary text-white text-sm font-medium whitespace-nowrap">
+                    <i data-feather="phone" class="w-4 h-4 inline mr-2"></i>Контакты
+                </a>
+                <a href="#info" class="quick-nav-tab px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-secondary hover:text-white text-gray-700 dark:text-gray-300 text-sm font-medium transition-all duration-300 whitespace-nowrap">
+                    <i data-feather="info" class="w-4 h-4 inline mr-2"></i>Информация
+                </a>
+                <a href="#form" class="quick-nav-tab px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-secondary hover:text-white text-gray-700 dark:text-gray-300 text-sm font-medium transition-all duration-300 whitespace-nowrap">
+                    <i data-feather="message-square" class="w-4 h-4 inline mr-2"></i>Форма
+                </a>
+                <a href="#map" class="quick-nav-tab px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-secondary hover:text-white text-gray-700 dark:text-gray-300 text-sm font-medium transition-all duration-300 whitespace-nowrap">
+                    <i data-feather="map-pin" class="w-4 h-4 inline mr-2"></i>Карта
+                </a>
+                <a href="#faq" class="quick-nav-tab px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-secondary hover:text-white text-gray-700 dark:text-gray-300 text-sm font-medium transition-all duration-300 whitespace-nowrap">
+                    <i data-feather="help-circle" class="w-4 h-4 inline mr-2"></i>FAQ
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Контактная форма + информация -->
-    <section class="py-20 px-4">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-            <!-- Форма -->
-            <div>
-                <h2 class="text-3xl font-serif font-bold mb-8 text-primary dark:text-white">Оставьте заявку</h2>
-                <form id="contactForm" class="space-y-6">
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Ваше имя *</label>
-                        <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-secondary outline-none transition">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Телефон *</label>
-                        <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-secondary outline-none transition">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Сообщение</label>
-                        <textarea name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-secondary outline-none transition resize-none"></textarea>
-                    </div>
-
-                    <!-- Капча -->
-                    <div id="smartcaptcha-container"></div>
-                    <input type="hidden" name="captcha-token" id="captcha-token">
-
-                    <button type="submit" id="submitBtn" class="w-full bg-secondary text-white font-bold py-4 rounded-lg hover:bg-orange-700 transition shadow-lg">
-                        <span id="submitText">Отправить заявку</span>
-                    </button>
-                </form>
-            </div>
-
-            <!-- Контакты -->
-            <div>
-                <h2 class="text-3xl font-serif font-bold mb-8 text-primary dark:text-white">Контакты</h2>
-                <div class="space-y-6">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i data-feather="phone" class="w-6"></i>
+    <!-- Page Header -->
+    <section id="contact-header" class="pt-32 pb-20 px-4 md:px-8 bg-gradient-to-r from-primary/10 via-transparent to-secondary/10 dark:from-primary/20 dark:to-secondary/20 scroll-mt-24">
+<div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary dark:text-white">Контакты</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Свяжитесь с нами для консультации по проектированию и монтажу инженерных коммуникаций для частного строительства в Севастополе и Крыму. Вентиляция, отопление, водоснабжение, канализация, кондиционирование, увлажнение, пылеудаление.
+            </p>
+</div>
+    </section>
+    <!-- Contact Info & Form -->
+    <section id="info" class="relative py-20 px-4 md:px-8 scroll-mt-24 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 dark:opacity-5" style="background-image: url('img/hero/hero-main.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 dark:from-primary/10 dark:to-secondary/10"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Contact Information -->
+                <div>
+                    <h2 class="text-3xl font-serif font-bold mb-8 text-primary dark:text-white">Наши контакты</h2>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-6">
+                            <div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-feather="phone" class="text-secondary w-7 h-7"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-primary dark:text-white">Телефоны</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-2">
+                                    <a href="tel:+79780000000" class="hover:text-secondary transition-colors">+7 (978) 000-00-00</a> — основной
+                                </p>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    <a href="tel:+79780000001" class="hover:text-secondary transition-colors">+7 (978) 000-00-01</a> — сервисная служба
+                                </p>
+                            </div>
                         </div>
+                        
+                        <div class="flex items-start gap-6">
+                            <div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-feather="mail" class="text-secondary w-7 h-7"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-primary dark:text-white">Электронная почта</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-2">
+                                    <a href="mailto:info@engineeringcomfort.ru" class="hover:text-secondary transition-colors">info@engineeringcomfort.ru</a> — общие вопросы
+                                </p>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    <a href="mailto:service@engineeringcomfort.ru" class="hover:text-secondary transition-colors">service@engineeringcomfort.ru</a> — сервис
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-6">
+                            <div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-feather="map-pin" class="text-secondary w-7 h-7"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-primary dark:text-white">Адрес офиса</h3>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    г. Севастополь, ул. Инженерная, 15, офис 301
+                                </p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">
+                                    Пн-Пт: 9:00-18:00, Сб: 10:00-15:00
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-6">
+                            <div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-feather="clock" class="text-secondary w-7 h-7"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-primary dark:text-white">Режим работы</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-2">
+                                    <span class="font-semibold">Офис:</span> Пн-Пт 9:00–18:00, Сб 10:00–15:00
+                                </p>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    <span class="font-semibold">Сервисная служба:</span> круглосуточно, без выходных
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Social Links -->
+                    <div class="mt-12">
+                        <h3 class="text-xl font-bold mb-6 text-primary dark:text-white">Мы в социальных сетях</h3>
+                        <div class="flex gap-4">
+                            <a href="https://t.me/krym_engineering" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-gray-100 dark:bg-gray-800 hover:bg-secondary rounded-full flex items-center justify-center transition-all duration-300" aria-label="Telegram">
+                                <img src="assets/logo/telegram-icon.png?v=2" alt="Telegram" width="24" height="24" style="filter: none !important;">
+                            </a>
+                            <a href="https://vk.com/krym_engineering" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-gray-100 dark:bg-gray-800 hover:bg-secondary rounded-full flex items-center justify-center transition-all duration-300" aria-label="ВКонтакте">
+                                <img src="assets/logo/vk-icon.png?v=2" alt="ВКонтакте" width="24" height="24" style="filter: none !important;">
+                            </a>
+                        </div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">ВКонтакте и Telegram</p>
+                    </div>
+</div>
+                <!-- Contact Form -->
+                <div id="form" class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 scroll-mt-24">
+<h2 class="text-3xl font-serif font-bold mb-8 text-primary dark:text-white">Отправить сообщение</h2>
+                    
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Имя *</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-light dark:bg-gray-700 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all form-input">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Телефон *</label>
+                                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-light dark:bg-gray-700 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all form-input">
+                            </div>
+                        </div>
+                        
                         <div>
-                            <p class="font-semibold">Телефон</p>
-                            <a href="tel:+79780000000" class="text-xl text-secondary hover:underline">+7 (978) 000-00-00</a>
+                            <label for="email" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-light dark:bg-gray-700 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all form-input">
                         </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i data-feather="mail" class="w-6 h-6"></i>
-                        </div>
+                        
                         <div>
-                            <p class="font-semibold">Email</p>
-                            <a href="mailto:info@krym-engineering.ru" class="text-xl text-secondary hover:underline">info@krym-engineering.ru</a>
+                            <label for="service" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Интересующая услуга</label>
+                            <select id="service" name="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-light dark:bg-gray-700 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all form-input">
+                                <option value="">Выберите услугу</option>
+                                <option value="ventilation">Вентиляция</option>
+                                <option value="heating">Отопление</option>
+                                <option value="water">Водоснабжение</option>
+                                <option value="ac">Кондиционирование</option>
+                                <option value="other">Другое</option>
+                            </select>
                         </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i data-feather="map-pin" class="w-6 h-6"></i>
-                        </div>
+                        
                         <div>
-                            <p class="font-semibold">Адрес</p>
-                            <p class="text-lg">Севастополь и весь Крым</p>
+                            <label for="message" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Сообщение *</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-light dark:bg-gray-700 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all form-input"></textarea>
                         </div>
-                    </div>
+                        
+                        <div class="flex items-start">
+                            <input type="checkbox" id="consent" name="consent" required class="w-4 h-4 text-secondary border-gray-300 rounded focus:ring-secondary mt-1 flex-shrink-0">
+                            <label for="consent" class="ml-3 text-sm text-gray-600 dark:text-gray-300">
+                                Я согласен на обработку персональных данных в соответствии с 
+                                <a href="privacy-policy.html" target="_blank" class="text-secondary hover:underline font-medium">Политикой конфиденциальности</a>
+                            </label>
+                        </div>
+                        
+                        <!-- Yandex SmartCaptcha -->
+                        <div id="smartcaptcha-container" class="mb-4"></div>
+                        <input type="hidden" id="captcha-token" name="captcha-token">
+                        
+                        <button type="submit" id="submitBtn" class="w-full bg-secondary hover:bg-secondary/90 text-white font-semibold py-4 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed">
+                            <i data-feather="send" class="w-5 h-5"></i>
+                            <span id="submitText">Отправить сообщение</span>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
-
+    <!-- Map -->
+    <section id="map" class="py-20 px-4 md:px-8 bg-white dark:bg-gray-900 scroll-mt-24">
+<div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-serif font-bold mb-8 text-center text-primary dark:text-white">Как нас найти</h2>
+            <div class="rounded-2xl overflow-hidden shadow-2xl h-[400px]">
+                <!-- Simple map placeholder -->
+                <div class="w-full h-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
+                    <div class="text-center p-8">
+                        <i data-feather="map" class="w-16 h-16 text-gray-400 dark:text-gray-500 mx-auto mb-6"></i>
+                        <h3 class="text-xl font-bold mb-2 text-gray-700 dark:text-gray-200">г. Севастополь, ул. Инженерная, 15</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Офис находится в центре города, рядом с парком Победы.</p>
+                    </div>
+                </div>
+                <!-- In real project, embed Google Maps here -->
+            </div>
+        </div>
+    </section>
     <!-- FAQ -->
-    <section class="py-20 px-4 bg-gray-50 dark:bg-gray-900">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-serif font-bold text-center mb-12 text-primary dark:text-white">Частые вопросы</h2>
-            <div class="grid md:grid-cols-2 gap-6">
+    <section id="faq" class="relative py-20 px-4 md:px-8 scroll-mt-24 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 dark:opacity-5" style="background-image: url('img/hero/hero-main.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 dark:from-primary/10 dark:to-secondary/10"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h2 class="text-3xl font-serif font-bold mb-8 text-center text-primary dark:text-white">Частые вопросы</h2>
+            
+            <div class="space-y-6">
                 <div class="bg-light dark:bg-gray-800 rounded-xl p-6 shadow-soft">
-                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-white">Сколько стоит проект?</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Стоимость рассчитывается индивидуально. Средний проект — от 150 000 ₽</p>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-white">Как быстро вы можете приехать на замер?</h3>
+                    <p class="text-gray-600 dark:text-gray-300">В течение 1–2 рабочих дней после обращения. В экстренных случаях — в тот же день.</p>
                 </div>
+                
                 <div class="bg-light dark:bg-gray-800 rounded-xl p-6 shadow-soft">
-                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-white">Сколько времени занимает монтаж?</h3>
-                    <p class="text-gray-600 dark:text-gray-300">От 2 недель до 3 месяцев в зависимости от сложности объекта.</p>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-white">Даёте ли вы гарантию на оборудование и работы?</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Да, гарантия на оборудование — от 2 до 5 лет в зависимости от производителя. На монтажные работы — 3 года.</p>
                 </div>
+                
                 <div class="bg-light dark:bg-gray-800 rounded-xl p-6 shadow-soft">
-                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-white">Даёте ли вы гарантию?</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Да, гарантия на оборудование — от 2 до 5 лет. На работы — 3 года.</p>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-white">Работаете ли вы по всей территории Крыма?</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Да, мы выполняем проекты по всему Крыму: от Севастополя до Керчи.</p>
                 </div>
+                
                 <div class="bg-light dark:bg-gray-800 rounded-xl p-6 shadow-soft">
-                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-white">Работаете ли вы по всему Крыму?</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Да, от Севастополя до Керчи.</p>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-white">Можно ли заказать только проектирование без монтажа?</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Конечно, мы предоставляем услуги проектирования отдельно. Готовый проект включает все чертежи и спецификации.</p>
                 </div>
             </div>
         </div>
@@ -165,6 +278,7 @@
     <partners-carousel></partners-carousel>
     <custom-footer></custom-footer>
 
+    <!-- Кнопка тёмной темы -->
     <button id="themeToggle" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-secondary text-white rounded-full shadow-2xl flex items-center justify-center hover:rotate-180 transition-all">
         <i data-feather="moon" class="dark:hidden w-7 h-7"></i>
         <i data-feather="sun" class="hidden dark:block w-7 h-7"></i>
@@ -172,14 +286,13 @@
 
     <!-- Yandex SmartCaptcha -->
     <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
-
+    
     <script src="js/navbar.js"></script>
     <script src="js/partners-carousel.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/analytics.js"></script>
     <script src="js/script.js"></script>
     <script src="js/form-security.js"></script>
-
     <script>
         feather.replace();
     </script>
