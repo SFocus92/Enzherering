@@ -19,4 +19,5 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.YC_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_SECRET_ACCESS_KEY }}
         run: |
-          aws s3 sync . s3://kriminzheering --endpoint-url=https://storage.yandexcloud.net --delete --exclude ".git*" --exclude ".github/*" --exclude "*.md"
+          aws s3 sync . s3://kriminzheering --endpoint-url=https://storage.yandexcloud.net --delete --exclude ".git*" --exclude ".github/*" --exclude "*.md
+          
